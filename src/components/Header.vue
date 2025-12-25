@@ -10,37 +10,37 @@
         <input type="text" placeholder="cari..." class="border-0 outline-none h-full text-xl font-thin">
     </div>
     <div class="w-fit h-full flex flex-row items-center gap-6">
-      <div class="">
+      <a href="#" class="">
         <img
           src="https://files.svgcdn.io/material-symbols-light/notifications-outline-rounded.svg"
           alt="notif"
           class="size-10"
         />
-      </div>
-      <div class="">
+      </a>
+      <a href="#" class="">
         <img
           src="https://files.svgcdn.io/material-symbols-light/mail-outline.svg"
           alt="mail"
           class="size-10"
         />
-      </div>
+      </a>
       <div class="w-1 h-full bg-[#ebebeb] rounded-full"></div>
 
       <div class="w-fit h-full flex flex-row items-center gap-3">
         <div class="w-fit h-fit flex flex-row items-center gap-4">
           <div class="w-fit h-full flex flex-col justify-around items-end">
-            <h2 class="font-semibold">Asnawi Ahmad</h2>
+            <h2 class="font-semibold">Fajar Setiawan</h2>
             <h3 class="text-sm"><span>💚</span> Online</h3>
           </div>
-          <img src="../assets/icon/profile.svg" alt="akun" class="size-10" />
+          <img src="../assets/foto.png" alt="akun" class="size-10 rounded-full" />
         </div>
-        <div class="">
+        <a href="#" class="">
           <img
             src="https://files.svgcdn.io/material-symbols-light/settings-outline-rounded.svg"
             alt="setting"
             class="size-10"
           />
-        </div>
+        </a>
       </div>
     </div>
   </div>
