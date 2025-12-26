@@ -1,4 +1,4 @@
-import {createRouter, createMemoryHistory, createWebHistory, createWebHashHistory} from 'vue-router'
+import {createRouter, createWebHashHistory} from 'vue-router'
 import About from "../view/About.vue";
 import Dashboard from "../view/Dashboard.vue";
 import Side from '../components/Side.vue';
