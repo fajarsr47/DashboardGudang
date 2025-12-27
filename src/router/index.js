@@ -4,6 +4,7 @@ import Dashboard from "../view/Dashboard.vue";
 import Side from '../components/Side.vue';
 import Header from '../components/Header.vue';
 import Products from '../view/Products.vue';
+import DetailProduct from '../view/DetailProduct.vue';
 
 const routes = [
     {
@@ -28,6 +29,14 @@ const routes = [
             side: Side,
             top: Header,
             default: Products
+        }
+    },
+    {
+        path: '/product/:id',
+        components:{
+            side: Side,
+            top: Header,
+            default: DetailProduct
         }
     }
 ]

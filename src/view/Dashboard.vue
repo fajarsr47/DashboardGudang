@@ -21,8 +21,13 @@ const stokKurang = computed(() => {
   return store.products.filter((item) => item.stock < 15).length;
 });
 
+const sku = computed(() => {
+  return store.products.filter((item) => item.sku).length;
+})
+
 const formatUang = (angka) => {
-  return new Intl.NumberFormat("id-ID", {
+  // return new Intl.NumberFormat("id-ID", {
+  return new Intl.NumberFormat("en-US", {
     style: "currency", //pakai 'currency' bisa ada 'Rp'
     currency: "USD",
     minimumFractionDigits: 0,
@@ -211,7 +216,7 @@ const donutOptions = {
     <div class="bg-white p-3 rounded-xl row-span-2">
       <DashCard
         title="Total SKU"
-        :value="totalProduct"
+        :value="sku"
         icon="https://img.icons8.com/?size=100&id=I8EMO0x9C323&format=png&color=000000"
       />
     </div>
@@ -223,15 +228,15 @@ const donutOptions = {
       />
     </div>
     <div
-      class="bg-white p-5 rounded-xl row-span-7 flex flex-col shadow-sm overflow-hidden"
+      class="bg-white p-5 rounded-xl row-span-10 flex flex-col shadow-sm overflow-hidden"
     >
       <h3 class="font-bold text-gray-700 mb-5 text-lg">Aktivitas Terkini</h3>
 
-      <div class="overflow-y-auto pr-2 flex grow">
+      <div class="overflow-y-auto pr-2 flex flex-col grow h-0">
         <div
           v-for="(act, index) in activities"
           :key="act.id"
-          class="flex gap-4 mb-6 relative group"
+          class="flex gap-4 mb-6 relative group shrink-0"
         >
           <div
             v-if="index !== activities.length - 1"
@@ -271,9 +276,9 @@ const donutOptions = {
     >
       <div class="flex justify-between items-center mb-4">
         <h3 class="font-bold text-gray-700 text-lg">Transaksi Terbaru</h3>
-        <button class="text-sm text-blue-500 font-medium hover:underline">
+        <!-- <button class="text-sm text-blue-500 font-medium hover:underline">
           Lihat Semua
-        </button>
+        </button> -->
       </div>
 
       <div class="overflow-y-auto h-full pr-2">
@@ -326,7 +331,7 @@ const donutOptions = {
         ></apexchart>
       </div>
     </div>
-    <div class="bg-white p-4 rounded-xl row-span-3 flex flex-col">
+    <!-- <div class="bg-white p-4 rounded-xl row-span-3 flex flex-col">
       <h3 class="font-bold text-gray-700 mb-3 text-sm">Aksi Cepat</h3>
 
       <div class="grid grid-cols-2 gap-3 h-full">
@@ -378,7 +383,7 @@ const donutOptions = {
           <span class="text-xs font-semibold">Scan</span>
         </button>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
